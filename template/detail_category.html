@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+
+    <header>
+            <div class="a111">
+            <h1>Welcome your Detail</h1>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'list_category' %}">Menu</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px"  href="{% url 'delete_category' object.id %}">Delete</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'update_category' object.id %}">Update</a>
+    </div>
+    </header>
+    {% block content %}
+    <div class="container">
+            <div class="card">
+                <h3>Name: {{category.name}}</h3>
+
+
+            </div>
+        </div>
+        {% for vakan in vakansi %}
+        <tr>
+    <td style="width: 25%;"><img style="width: 50%;  " src="{{ vakan.image }}" alt=""></td>
+        <h3>{{ vakan.title }}</h3>
+        <h3>{{ vakan.description }}</h3>
+        <h3>{{ vakan.price }}</h3>
+        <h3>{{ vakan.category }}</h3>
+        <h3><a href="{% url 'detail_vakan' vakan.id %}">Get</a></h3>
+        </tr>
+        {% endfor %}
+
+{% endblock content %}
+</body>
+</html>

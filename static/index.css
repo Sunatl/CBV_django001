@@ -1,0 +1,161 @@
+/* Услубҳо барои body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Услубҳо барои меню (блоки а1) */
+.a1 {
+    background-color: #34495e;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.a2 {
+    color: #ecf0f1;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.a1 a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.a1 a:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Услубҳо барои асоси саҳифа (блоки a5) */
+.a5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.a8 {
+    flex: 1;
+    padding: 20px;
+}
+
+.qw {
+    color: #2c3e50;
+    font-size: 26px;
+}
+
+.a8 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+.a8 a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+.a8 a:hover {
+    color: #2980b9;
+}
+
+.a6 {
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.a6:hover {
+    transform: scale(1.05);
+}
+
+/* Услубҳо барои блоки поёни саҳифа */
+.aa1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.aa2 {
+    font-size: 24px;
+}
+
+/* Контейнер барои шакл */
+.aa11 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+/* Услубҳо барои унвон */
+.a33 {
+    color: #34495e;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Услубҳо барои input */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Услубҳо барои тугмаи 'OK' */
+.aaa1 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.aaa1:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+
+    <header>
+            <div class="a111">
+            <h1>Welcome your Detail</h1>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'list_vakan' %}">Menu</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px"  href="{% url 'delete_vakan' object.id %}">Delete</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'update_vakan' object.id %}">Update</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'create_app'%}">Zayavleni</a>
+    </div>
+    </header>
+    {% block content %}
+    <div class="container">
+            <div class="card">
+                
+                <h3>Title: {{object.title}}</h3>
+                <h3>Description: {{object.description}}</h3>
+                <h3>Price: {{object.price}}</h3>
+                <h3>Category: {{object.category}}</h3>
+
+            </div>
+        </div>
+
+
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+
+    <header>
+            <div class="a111">
+            <h1>Welcome your Detail</h1>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'list_app' %}">Menu</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px"  href="{% url 'delete_app' object.id %}">Delete</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'update_app' object.id %}">Update</a>
+    </div>
+    </header>
+    {% block content %}
+    <div class="container">
+            <div class="card">
+                <h3>Resume: <a href="{{ object.resume }}" download>Нигаред</a></h3>
+                <h3>Vakansi: {{object.vakansi}}</h3>
+                <h3>Applicant name: {{object.applicant_name}}</h3>
+                <h3>email: {{object.email}}</h3>
+                <h3>Phone number: {{object.phone_number}}</h3>
+                <h3>Application date: {{object.application_date}}</h3>
+            </div>
+        </div>
+
+
+{% endblock content %}
+</body>
+</html>

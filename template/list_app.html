@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'index2.css' %}">
+</head>
+<body>
+
+    <div class="a1">
+        <h1>Application</h1>
+        <div class="base">
+        <!-- <a href="http://127.0.0.1:8000/Rohbar_information"><h3 class="sa">Category</h3></a> -->
+        <a href="{% url 'base' %}"><h3 class="sas">Home</h3></a>
+        <a href="{% url 'create_app' %}"><h3 class="sas">Add</h3></a>
+    </div>
+    </div>
+
+
+<div class="b1">
+        <table>
+            <caption> <h3>Application</h1> </caption>
+            <tr>
+                <th>Vakansi</th>
+                <th>Applicant name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Application date</th>
+                <th>Detail</th>
+
+            </tr>
+        {% for category in object_list %}
+        <tr>
+        <td>{{ category.vakansi }}</td>
+        <td>{{ category.applicant_name }}</td>
+        <td>{{ category.email }}</td>
+        <td>{{ category.phone_number }}</td>
+        <td>{{ category.application_date }}</td>
+
+
+        <td><a href="{% url 'detail_app' category.id %}">Get</a></td>
+        </tr>
+        {% endfor %}
+        </table>
+        </div>
+
+    </head>
+    <body>
